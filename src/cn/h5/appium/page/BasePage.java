@@ -20,6 +20,10 @@ import cn.h5.appium.base.AndroidElementBase;
 
 import com.google.common.collect.ImmutableMap;
 
+/**
+ * @author Administrator
+ *
+ */
 public class BasePage extends RemoteWebElement {
 	public String curActivity;
 	public String pageSource;
@@ -31,26 +35,33 @@ public class BasePage extends RemoteWebElement {
 		this.pageSource = getPageSource();
 	}
 
-	// 获取当前activity
+	
+	/**
+	 * 获取当前activity
+	 * @return
+	 */
 	public String getCurActivity() {
 		return driver.currentActivity();
 	}
 
+	/**
+	 * 获取当前页面源码
+	 * @return
+	 */
 	public String getPageSource() {
 		return driver.getPageSouce();
 	}
 	
 	
 	
-	@Override
+/*	@Override
 	public String getText() {
 		Response response = execute(DriverCommand.GET_ELEMENT_TEXT, ImmutableMap.of("id", id));
 		return (String) response.getValue();
-	}
+	}*/
 	
 	/**
-	 * 
-	 * @param string
+	 * @param by
 	 * @return 返回文本
 	 */
 	public String getMyText(By by){
@@ -63,8 +74,7 @@ public class BasePage extends RemoteWebElement {
 	}
 	
 	/**
-	 * 
-	 * @param string
+	 * @param AndroidElement
 	 * @return 返回文本
 	 */
 	public String getMyText(AndroidElement el){
@@ -86,7 +96,11 @@ public class BasePage extends RemoteWebElement {
 		}
 	}
 
-	// 输入数字英文字母
+	/**
+	 * 输入数字英文字母
+	 * @param by
+	 * @param value
+	 */
 	public void setValue(By by, String value) {
 		AndroidElement element = driver.findElement(by);
 		try {
@@ -98,6 +112,10 @@ public class BasePage extends RemoteWebElement {
 		
 	}
 	
+	/**
+	 * @param element
+	 * @param value
+	 */
 	public void setValue(AndroidElement element, String value) {
 		if (element != null && value!= null) {
 			element.setValue(value);
@@ -107,7 +125,11 @@ public class BasePage extends RemoteWebElement {
 	}
 	
 	
-	// 输入中文
+	/**
+	 * 输入中文
+	 * @param by
+	 * @param value
+	 */
 	public void replaceValue(By by, String value) {
 		AndroidElement element = driver.findElement(by);
 		try {
@@ -119,6 +141,11 @@ public class BasePage extends RemoteWebElement {
 		
 	}
 	
+	/**
+	 * 输入中文
+	 * @param element
+	 * @param value
+	 */
 	public void replaceValue(AndroidElement element, String value) {
 		if (element != null && value!= null) {
 			element.replaceValue(value);
@@ -133,7 +160,10 @@ public class BasePage extends RemoteWebElement {
 		sendkeys(element, value);
 	}
 
-	// 点击
+	
+	/**
+	 * @param element
+	 */
 	public void click(AndroidElement element) {
 		if (element != null) {
 			element.click();
@@ -142,16 +172,22 @@ public class BasePage extends RemoteWebElement {
 		}
 	}
 	
-	// 点击
-		public void click(AndroidElementBase element) {
-			if (element != null) {
-				element.click();
-			} else {
-				System.out.println("点击失败，元素没有定位到，是null");
-			}
+	/**
+	 * // 点击元素
+	 * @param element
+	 */
+	public void click(AndroidElementBase element) {
+		if (element != null) {
+			element.click();
+		} else {
+			System.out.println("点击失败，元素没有定位到，是null");
 		}
+	}
 
-	// 定位并点击
+	/**
+	 * 定位并点击
+	 * @param by
+	 */
 	public void click(By by) {
 		AndroidElement element = driver.findElement(by);
 		if (element!=null) {

@@ -36,22 +36,24 @@ public class Servers {
 	private Port port;
 	private DosCmd dos;
 	private String path=System.getProperty("user.dir");
+	
 	public Servers(Port port,DosCmd dos){
 		this.port=port;
 		this.dos=dos;
 	}
+	
 	/**
 	 * 根据设备数量生成可用端口列表
 	 * @param start 端口起始号
 	 * @return 返回值是一个List<Integer>
 	 * @throws Exception
 	 */
-	//
 	private List<Integer> getPortList(int start) throws Exception{
 		List<String> deviceList=getDevices();
 		List<Integer> portList=port.GeneratPortList(start, deviceList.size());
 		return portList;	
 	}
+	
 	/**
 	 * 获取当前可用设备
 	 * @return
@@ -72,6 +74,7 @@ public class Servers {
 		}
 		return deviceRes;
 	}
+	
 	/**
 	 * 生成服务端启动命令字符串存入List
 	 * @return
@@ -91,6 +94,7 @@ public class Servers {
 		XmlUtil.createDeviceXml(deviceList,appiumPortList);
 		return commandList;
 	}
+	
 	/**
 	 * 启动所有appium服务端
 	 * @return

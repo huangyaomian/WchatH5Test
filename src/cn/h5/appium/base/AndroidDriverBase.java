@@ -226,6 +226,7 @@ public class AndroidDriverBase extends AndroidDriver<AndroidElement> {
 			return null;
 		}
 	}
+	
 	/**
 	 * 查找元素存在则返回该元素对象，不存在则返回null
 	 * @param by
@@ -244,10 +245,13 @@ public class AndroidDriverBase extends AndroidDriver<AndroidElement> {
 		}
 	}
 	
-	public AndroidElementBase findElementMy(By by){
+	/* (non-Javadoc)
+	 * @see io.appium.java_client.AppiumDriver#findElements(org.openqa.selenium.By)
+	 */
+	@Override 
+	public List<AndroidElement> findElements(By by) {
 		try {
-			AndroidElementBase element=(AndroidElementBase) super.findElement(by);
-			return element;
+			return super.findElements(by);
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("element is null");
@@ -255,29 +259,6 @@ public class AndroidDriverBase extends AndroidDriver<AndroidElement> {
 			return null;
 		}
 	}
-	
-//	 @Override 
-	 public List<AndroidElement> findElements(By by) {
-	    	try {
-	    		 return super.findElements(by);
-			} catch (Exception e) {
-				// TODO: handle exception
-				System.out.println("element is null");
-				logger.debug("element is null");
-				return null;
-			}
-	    }
-	 
-//	 public List<AndroidElementBase> findElementsMy(By by) {
-//	    	try {
-//	    		 return super.findElements(by);
-//			} catch (Exception e) {
-//				// TODO: handle exception
-//				System.out.println("element is null");
-//				logger.debug("element is null");
-//				return null;
-//			}
-//	    }
 	 
 	
 	/**
@@ -302,14 +283,6 @@ public class AndroidDriverBase extends AndroidDriver<AndroidElement> {
 		}
 
 	}
-	
-	
-//	@Override
-//	public List findElements(By by){
-//		List<AndroidElement> elementList=super.findElements(by);
-//		return elementList;
-//	}
-	
 	
 	/**
 	 * 滑动屏幕方法，通过参数实现各方向滑动
@@ -439,9 +412,6 @@ public class AndroidDriverBase extends AndroidDriver<AndroidElement> {
 		return element;
 	}
 	
-	
-	
-	
 	/**
 	 * 与服务端断开连接,断开前重置输入法
 	 */
@@ -451,9 +421,8 @@ public class AndroidDriverBase extends AndroidDriver<AndroidElement> {
 	}
 	
 	
-	
-	
 	/**
+	 * 最新的api没有了此方法
 	 * 单击某元素，使用tap方式
 	 * @param element
 	 * @param duration
@@ -582,6 +551,7 @@ public class AndroidDriverBase extends AndroidDriver<AndroidElement> {
 	public void implicitlyWait(int timeout){
 		super.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
 	}
+	
 	/**
 	 * 获取手机分辨率
 	 * @return

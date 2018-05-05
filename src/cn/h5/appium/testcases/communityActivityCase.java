@@ -49,7 +49,7 @@ public class communityActivityCase extends CaseBaseTest {
 	
 	@AfterMethod
 	public void afterMethod(){
-			System.out.println("方法执行完成");
+		System.out.println("方法执行完成");
 	}
 	@AfterSuite
 	public void quit(){
