@@ -42,7 +42,7 @@ public class XmlUtil {
 		// 迭代输出
 		List<String> deviceData = new ArrayList<String>();
 		for (Element e : deviceList) {
-			for (Iterator iter = e.elementIterator(); iter.hasNext();) {
+			for (Iterator<?> iter = e.elementIterator(); iter.hasNext();) {
 				Element e1 = (Element) iter.next();
 				deviceData.add(e1.getText());
 			}

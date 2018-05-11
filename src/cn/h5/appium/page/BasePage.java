@@ -11,14 +11,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.remote.DriverCommand;
 import org.openqa.selenium.remote.RemoteWebElement;
-import org.openqa.selenium.remote.Response;
 
 import cn.h5.appium.base.AndroidDriverBase;
 import cn.h5.appium.base.AndroidElementBase;
 
-import com.google.common.collect.ImmutableMap;
 
 /**
  * @author Administrator

@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 /**
+ * 配置log4j的一些配置文件路径，打印样式调整
  * @author 
  *
  */
@@ -23,34 +24,39 @@ public class Log {
 	}
 
 	public void debug(Object message) {
-		log.debug(thread.getName()+message);
+		log.debug(thread.getName()+"---"+message);
 	}
 
 	public void debug(Object message, Throwable t) {
-		log.debug(thread.getName()+message, t);
+		log.debug(thread.getName()+"---"+message, t);
 	}
 
 	public void info(Object message) {
-		log.info(thread.getName()+message);
+		log.info(thread.getName()+"---"+message);
 	}
 
 	public void info(Object message, Throwable t) {
-		log.info(thread.getName()+message, t);
+		log.info(thread.getName()+"---"+message, t);
 	}
 
 	public void warn(Object message) {
-		log.warn(thread.getName()+message);
+		log.warn(thread.getName()+"---"+message);
 	}
 
 	public void warn(Object message, Throwable t) {
-		log.warn(thread.getName()+message, t);
+		log.warn(thread.getName()+"---"+message, t);
 	}
 
 	public void error(Object message) {
-		log.error(thread.getName()+message);
+		log.error(thread.getName()+"---"+message);
 	}
 
 	public void error(Object message, Throwable t) {
-		log.error(thread.getName()+message, t);
+		log.error(thread.getName()+"---"+message, t);
+	}
+	
+	public static void main(String[] args) {
+		Log logger=Log.getLogger(Log.class);
+		logger.debug("huangyaomina");
 	}
 }

@@ -18,18 +18,19 @@ public class CrazyCapabilities {
 			caps.setCapability(AndroidCapabilityType.DEVICE_NAME, p.getPro(AndroidCapabilityType.DEVICE_NAME));
 			caps.setCapability(AndroidCapabilityType.APP_PACKAGE, p.getPro(AndroidCapabilityType.APP_PACKAGE));
 			caps.setCapability(AndroidCapabilityType.APP_ACTIVITY, p.getPro(AndroidCapabilityType.APP_ACTIVITY));
-			caps.setCapability(AndroidCapabilityType.NO_RESET, Boolean.getBoolean(p.getPro(AndroidCapabilityType.NO_RESET))); //涓嶉渶瑕佸啀娆″畨瑁�
-			caps.setCapability(AndroidCapabilityType.NO_SIGN, Boolean.getBoolean(p.getPro(AndroidCapabilityType.NO_SIGN)));
-			caps.setCapability(AndroidCapabilityType.UNICODE_KEY_BOARD, Boolean.getBoolean(p.getPro(AndroidCapabilityType.UNICODE_KEY_BOARD)));
-			caps.setCapability(AndroidCapabilityType.RESET_KEY_BOARD, Boolean.getBoolean(p.getPro(AndroidCapabilityType.RESET_KEY_BOARD)));
+			caps.setCapability(AndroidCapabilityType.NO_RESET, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.NO_RESET))); 
+			caps.setCapability(AndroidCapabilityType.NO_SIGN, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.NO_SIGN)));
+			caps.setCapability(AndroidCapabilityType.UNICODE_KEY_BOARD, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.UNICODE_KEY_BOARD)));
+			caps.setCapability(AndroidCapabilityType.RESET_KEY_BOARD, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.RESET_KEY_BOARD)));
 			caps.setCapability(AndroidCapabilityType.AUTOMATION_NAME,p.getPro(AndroidCapabilityType.AUTOMATION_NAME));
+			caps.setCapability(AndroidCapabilityType.ANDROID_USE_RUNNING_APP, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.ANDROID_USE_RUNNING_APP)));
 			caps.setCapability(AndroidCapabilityType.UDID,p.getPro(AndroidCapabilityType.UDID));
 			File chromedriver=new File(p.getPro(AndroidCapabilityType.CHROMEDRIVER_PATH));//这个地方是配置Chromedriver的位置D:/chromedriver.exe
 			caps.setCapability(AndroidCapabilityType.CHROMEDRIVER_EXECUTABLE, chromedriver.getAbsolutePath());
 			ChromeOptions options=new ChromeOptions();
 			options.setExperimentalOption("androidProcess", "com.tencent.mm:tools");
 			caps.setCapability(ChromeOptions.CAPABILITY, options);
-			caps.setCapability(AndroidCapabilityType.NEW_COMMAND_TIMEOUT, p.getPro(AndroidCapabilityType.NEW_COMMAND_TIMEOUT));
+			caps.setCapability(AndroidCapabilityType.NEW_COMMAND_TIMEOUT, Integer.parseInt(p.getPro(AndroidCapabilityType.NEW_COMMAND_TIMEOUT)));
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -54,18 +55,19 @@ public class CrazyCapabilities {
 			caps.setCapability(AndroidCapabilityType.APP_PACKAGE, p.getPro(AndroidCapabilityType.APP_PACKAGE));
 			caps.setCapability(AndroidCapabilityType.APP_ACTIVITY, p.getPro(AndroidCapabilityType.APP_ACTIVITY));
 			caps.setCapability(AndroidCapabilityType.APP_WAIT_ACTIVITY, p.getPro(AndroidCapabilityType.APP_WAIT_ACTIVITY));
-			caps.setCapability(AndroidCapabilityType.NO_RESET, Boolean.getBoolean(p.getPro(AndroidCapabilityType.NO_RESET))); //涓嶉渶瑕佸啀娆″畨瑁�
-			caps.setCapability(AndroidCapabilityType.NO_SIGN, Boolean.getBoolean(p.getPro(AndroidCapabilityType.NO_SIGN)));
-			caps.setCapability(AndroidCapabilityType.UNICODE_KEY_BOARD, Boolean.getBoolean(p.getPro(AndroidCapabilityType.UNICODE_KEY_BOARD)));
-			caps.setCapability(AndroidCapabilityType.RESET_KEY_BOARD, Boolean.getBoolean(p.getPro(AndroidCapabilityType.RESET_KEY_BOARD)));
+			caps.setCapability(AndroidCapabilityType.NO_RESET, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.NO_RESET))); 
+			caps.setCapability(AndroidCapabilityType.NO_SIGN, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.NO_SIGN)));
+			caps.setCapability(AndroidCapabilityType.UNICODE_KEY_BOARD, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.UNICODE_KEY_BOARD)));
+			caps.setCapability(AndroidCapabilityType.RESET_KEY_BOARD, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.RESET_KEY_BOARD)));
 			caps.setCapability(AndroidCapabilityType.AUTOMATION_NAME,p.getPro(AndroidCapabilityType.AUTOMATION_NAME));
+			caps.setCapability(AndroidCapabilityType.ANDROID_USE_RUNNING_APP, Boolean.parseBoolean(p.getPro(AndroidCapabilityType.ANDROID_USE_RUNNING_APP)));
 			caps.setCapability(AndroidCapabilityType.UDID,p.getPro(AndroidCapabilityType.UDID));
 			File chromedriver=new File(p.getPro(AndroidCapabilityType.CHROMEDRIVER_PATH));//这个地方是配置Chromedriver的位置D:/chromedriver.exe
 			caps.setCapability(AndroidCapabilityType.CHROMEDRIVER_EXECUTABLE, chromedriver.getAbsolutePath());
 			ChromeOptions options=new ChromeOptions();
 			options.setExperimentalOption("androidProcess", "com.tencent.mm:tools");
 			caps.setCapability(ChromeOptions.CAPABILITY, options);
-			caps.setCapability(AndroidCapabilityType.NEW_COMMAND_TIMEOUT, p.getPro(AndroidCapabilityType.NEW_COMMAND_TIMEOUT));
+			caps.setCapability(AndroidCapabilityType.NEW_COMMAND_TIMEOUT, Integer.parseInt(p.getPro(AndroidCapabilityType.NEW_COMMAND_TIMEOUT)));
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

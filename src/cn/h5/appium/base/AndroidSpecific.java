@@ -10,7 +10,7 @@ public class AndroidSpecific {
 	 * 获取设备默认输入法
 	 * @return
 	 */
-	public static  String getDefaultInput(String udid){
+	public static String getDefaultInput(String udid){
 		DosCmd dc=new DosCmd();
 		String input="";
 		try {

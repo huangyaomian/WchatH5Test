@@ -1,7 +1,6 @@
 package cn.h5.appium.util;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -30,7 +29,7 @@ public class SendMail {
             msg.setFrom(new InternetAddress(sendUser)); //发件人   
             
             String toPersion = getMailList(to);
-            InternetAddress[] iaToList = new InternetAddress().parse(toPersion);
+			InternetAddress[] iaToList = InternetAddress.parse(toPersion);
             
             msg.setRecipients(Message.RecipientType.TO,iaToList); //收件人   
     

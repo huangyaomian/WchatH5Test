@@ -98,7 +98,7 @@ public class RandomUtil {
 	 * @param max
 	 * @return
 	 */
-	private static float randomFloat(int min,int max){
+	public static float randomFloat(int min,int max){
         Random random = new Random();
 //        int s = random.nextInt(max)%(max-min+1) + min;
         float x=min;//x=10

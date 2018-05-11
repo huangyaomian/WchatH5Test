@@ -16,9 +16,8 @@ public class CaseBaseTest {
 		String server=p.getPro("server");
 		String capsPath=CrazyPath.capsPath;
 		System.out.println(capsPath);
-		AndroidSpecific as=new AndroidSpecific();
 		//获取原本输入法，方便后续设置回去
-		String input=as.getDefaultInput(udid);
+		String input=AndroidSpecific.getDefaultInput(udid);
 		System.out.println("连接"+udid+"端口"+port);
 		System.out.println("开始创建server连接");
 		driver = new AndroidDriverBase(server, port, capsPath, udid, input);

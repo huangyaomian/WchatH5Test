@@ -25,6 +25,9 @@ public class communityActivityPage extends BasePage {
 		this.click(GetByLocator.getLocator("collectionBtn"));
 		Thread.sleep(1000);
 		this.click(GetByLocator.getLocator("viewBtn"));
+		logger.info("现在执行");
+//		System.out.println("现在执行");
+		driver.findElementByCssSelector("");
 
 		Thread.sleep(5000);
 		Set<String> contexts=driver.getContextHandles();
@@ -47,7 +50,6 @@ public class communityActivityPage extends BasePage {
 		//			driver.context("NATIVE_APP");
 		//			driver.context("WEBVIEW_com.tencent.mm:tools");
 		//			driver.findElement(By.xpath("//*[@title='芦笋淮山百合炒鲜虫草']")).click();
-
 		return true;
 	}
 

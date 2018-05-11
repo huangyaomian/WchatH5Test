@@ -11,6 +11,8 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Properties;
 
+import cn.h5.appium.base.AndroidCapabilityType;
+
 public class ProUtil {
 	private String filePath;
 	private Properties prop;
@@ -67,10 +69,12 @@ public class ProUtil {
         }
     }
 	public static void main(String[] args) {
-		ProUtil p=new ProUtil("test.properties");
-		System.out.println(p.getPro("password"));
-		p.setProp("username", "testfan0507");
-		System.out.println(p.getPro("username"));
-		//System.out.println(p.getPro("username1"));
+		ProUtil p=new ProUtil("configs/caps.properties");
+//		System.out.println(p.getPro("password"));
+//		p.setProp("username", "testfan0507");
+		System.out.println(p.getPro(AndroidCapabilityType.ANDROID_USE_RUNNING_APP));
+		System.out.println(Boolean.getBoolean(p.getPro(AndroidCapabilityType.ANDROID_USE_RUNNING_APP)));
+		System.out.println(Boolean.parseBoolean(p.getPro(AndroidCapabilityType.ANDROID_USE_RUNNING_APP)));
+		
 	}
 }

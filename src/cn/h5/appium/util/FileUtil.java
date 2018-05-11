@@ -10,15 +10,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.RandomAccessFile;
-import java.util.ArrayList;
-import java.util.List;
-
-import bsh.This;
-
-import cn.h5.appium.server.Servers;
 
 public class FileUtil {
-	private static String path=System.getProperty("user.dir");
+//	private static String path=System.getProperty("user.dir");
 	public static void main(String[] args) throws Exception, IOException {
 		writeTxtFile("黄死思思Sissi ","G:/Users/HYM/Desktop/心电血压回放问题.txt");
 	}
@@ -110,7 +104,7 @@ public class FileUtil {
 			StringBuffer buf = new StringBuffer();
 
 			// 保存该文件原有的内容
-			for (int j = 1; (temp = br.readLine()) != null; j++) {
+			for (; (temp = br.readLine()) != null;) {
 				buf = buf.append(temp);
 				// System.getProperty("line.separator")
 				// 行与行之间的分隔符 相当于“\n”

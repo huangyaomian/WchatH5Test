@@ -21,4 +21,5 @@ public interface AndroidCapabilityType extends AndroidMobileCapabilityType {
 	String NO_RESET = "noReset";
 	String APP = "app";
 	String CHROMEDRIVER_PATH = "chromedriverPath";
+	String ANDROID_USE_RUNNING_APP = "androidUseRunningApp";
 }

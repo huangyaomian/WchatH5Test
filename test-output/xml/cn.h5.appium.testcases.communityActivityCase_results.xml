@@ -1,13 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="c8ebc45e"
            tests="1"
-           failures="0"
+           failures="1"
            errors="0"
            skipped="0"
-           time="33.726">
+           time="26.251">
   <properties />
+            <testcase name="activityBannerCase" time="26.251" classname="cn.h5.appium.testcases.communityActivityCase">
+                <failure type="org.openqa.selenium.InvalidSelectorException"
+                  message="Locator Strategy &apos;css selector&apos; is not supported for this session (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;
+System info: host: &apos;PC-20170725TZYG&apos;, ip: &apos;192.168.4.53&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_141&apos;
+Driver info: cn.h5.appium.base.AndroidDriverBase
+Capabilities [{appPackage=com.tencent.mm, noReset=true, deviceName=c8ebc45e, platform=LINUX, deviceUDID=c8ebc45e, chromedriverExecutable=D:\chromedriver.exe, desired={app=D:\hym\apk\hx_andr_app_www_1.86-201709291556.apk, appPackage=com.tencent.mm, androidUseRunningApp=true, noReset=true, noSign=true, deviceName=devicename, appActivity=com.tencent.mm.ui.LauncherUI, chromedriverExecutable=D:\chromedriver.exe, newCommandTimeout=1200, automationName=Appium, unicodeKeyboard=true, chromeOptions={args=[], extensions=[], androidProcess=com.tencent.mm:tools}, udid=c8ebc45e, platformName=Android, resetKeyboard=true}, newCommandTimeout=1200, platformVersion=6.0.1, webStorageEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, unicodeKeyboard=true, udid=c8ebc45e, deviceManufacturer=samsung, platformName=LINUX, resetKeyboard=true, app=D:\hym\apk\hx_andr_app_www_1.86-201709291556.apk, deviceScreenSize=1080x1920, networkConnectionEnabled=true, androidUseRunningApp=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.tencent.mm.ui.LauncherUI, locationContextEnabled=false, deviceModel=SM-C7000, chromeOptions={args=[], extensions=[], androidProcess=com.tencent.mm:tools}}]
+Session ID: 3cbc04ff-882a-404a-98e3-557c179641f0
+*** Element info: {Using=css selector, value=}"
+              >
+<![CDATA[org.openqa.selenium.InvalidSelectorException: Locator Strategy 'css selector' is not supported for this session (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'PC-20170725TZYG', ip: '192.168.4.53', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_141'
+Driver info: cn.h5.appium.base.AndroidDriverBase
+Capabilities [{appPackage=com.tencent.mm, noReset=true, deviceName=c8ebc45e, platform=LINUX, deviceUDID=c8ebc45e, chromedriverExecutable=D:\chromedriver.exe, desired={app=D:\hym\apk\hx_andr_app_www_1.86-201709291556.apk, appPackage=com.tencent.mm, androidUseRunningApp=true, noReset=true, noSign=true, deviceName=devicename, appActivity=com.tencent.mm.ui.LauncherUI, chromedriverExecutable=D:\chromedriver.exe, newCommandTimeout=1200, automationName=Appium, unicodeKeyboard=true, chromeOptions={args=[], extensions=[], androidProcess=com.tencent.mm:tools}, udid=c8ebc45e, platformName=Android, resetKeyboard=true}, newCommandTimeout=1200, platformVersion=6.0.1, webStorageEnabled=false, automationName=Appium, takesScreenshot=true, javascriptEnabled=true, unicodeKeyboard=true, udid=c8ebc45e, deviceManufacturer=samsung, platformName=LINUX, resetKeyboard=true, app=D:\hym\apk\hx_andr_app_www_1.86-201709291556.apk, deviceScreenSize=1080x1920, networkConnectionEnabled=true, androidUseRunningApp=true, noSign=true, warnings={}, databaseEnabled=false, appActivity=com.tencent.mm.ui.LauncherUI, locationContextEnabled=false, deviceModel=SM-C7000, chromeOptions={args=[], extensions=[], androidProcess=com.tencent.mm:tools}}]
+Session ID: 3cbc04ff-882a-404a-98e3-557c179641f0
+*** Element info: {Using=css selector, value=}
+  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+  org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+  org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+  org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+  io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+  io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+  io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+  io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+  cn.h5.appium.base.AndroidDriverBase.execute(AndroidDriverBase.java:1)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+  io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+  io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+  io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+  cn.h5.appium.base.AndroidDriverBase.findElement(AndroidDriverBase.java:1)
+  org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:510)
+  io.appium.java_client.DefaultGenericMobileDriver.findElementByCssSelector(DefaultGenericMobileDriver.java:129)
+  io.appium.java_client.AppiumDriver.findElementByCssSelector(AppiumDriver.java:1)
+  io.appium.java_client.android.AndroidDriver.findElementByCssSelector(AndroidDriver.java:1)
+  cn.h5.appium.base.AndroidDriverBase.findElementByCssSelector(AndroidDriverBase.java:1)
+  cn.h5.appium.page.communityActivityPage.activityBanner(communityActivityPage.java:30)
+  cn.h5.appium.testcases.communityActivityCase.activityBannerCase(communityActivityCase.java:40)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+  org.testng.TestRunner.privateRun(TestRunner.java:767)
+  org.testng.TestRunner.run(TestRunner.java:617)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+  org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+  org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:369)
+  org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+  java.util.concurrent.FutureTask.run(FutureTask.java:266)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+  java.lang.Thread.run(Thread.java:748)
+]]>
+      </failure>
+
+          </testcase>
   
   
-            <testcase name="activityBannerCase" time="33.726" classname="cn.h5.appium.testcases.communityActivityCase" />
-      
+  
 </testsuite>

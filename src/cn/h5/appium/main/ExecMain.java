@@ -14,7 +14,7 @@ public class ExecMain {
 		System.setProperty(ESCAPE_PROPERTY, "false"); 
 		AppiumInit.init();
         List<String> suites = new ArrayList<String>();
-        suites.add(System.getProperty("user.dir")+"/testng.xml");
+        suites.add(path+"/testng.xml");
         System.out.println(suites);
         TestNG testNG = new TestNG();
         testNG.setTestSuites(suites);
